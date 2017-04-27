@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1> View post </h1>
+
+    <p> Name:   <%= @post.name %> </p>
+    <p> Content:   <%= @post.content %> </p>
+
+    <a href='/posts/<%= @post.id %>/edit'> Edit this post </a> <br>
+
+    <form action="/posts/<%= @post.id %>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <button type="submit" id="delete"> delete </button>
+    </form>
+
+    <a href='/posts'> Go back to posts </a>
+
+  </body>
+</html>

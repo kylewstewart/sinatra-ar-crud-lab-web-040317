@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1> Posts </h1>
+    <p> Click on a post to edit or delete </p>
+    <br>
+    <% @posts_all.each do |post| %>
+    <a href = "/posts/<%= post.id %>">
+    <p> Name: <%= post.name %> <p> <a>
+    <p> Content: <%= post.content %> <p>
+    <% end %>
+    <br>
+    <a href="/posts/new"> Create a new post </a>
+
+
+  </body>
+</html>
